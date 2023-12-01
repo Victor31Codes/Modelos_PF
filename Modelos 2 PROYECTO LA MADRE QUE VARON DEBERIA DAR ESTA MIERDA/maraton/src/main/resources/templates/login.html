@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link
+      rel="shortcut icon"
+      href="assets/logo_pestaña.png"
+      type="image/x-icon"
+    />
+    <script
+      src="https://kit.fontawesome.com/e8f5675b73.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Login</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav_header">
+        <picture id="imagen_logo"
+          ><img src="assets/maraton_logo.jpg" alt="logo_maratonProgramacion"
+        /></picture>
+        <button class="burger_btn">
+          <i class="fa-solid fa-align-justify"></i>
+        </button>
+      </div>
+      <div class="nav_links">
+        <a href="index.html" class="nav_link"> Home </a>
+        <a href="registro.html" class="nav_link"> Register </a>
+        <a href="login.html" class="nav_link"> Login </a>
+      </div>
+    </nav>
+    <section class="form-container">
+      <form class="form-login" action="consultas.html">
+        <h5>Formulario Login</h5>
+        <input
+          class="controls"
+          type="text"
+          name="usuario"
+          value=""
+          placeholder="Usuario"
+        />
+        <input
+          class="controls"
+          type="password"
+          name="contrasena"
+          value=""
+          placeholder="Contraseña"
+        />
+        <button class="buttons" href="consultas.html" type="submit">Ingresar</button>
+        <p><a href="#">¿Olvidastes tu Contraseña?</a></p>
+      </form>
+    </section>
+
+    <footer class="footer_container">
+      <p>
+        &copy; 2023 <span>Maratón de Programación</span> All rights reserved
+        <a
+          href="https://github.com/Victor31Codes?tab=repositories"
+          target="_blank"
+        >
+          Henry Rivera, Juan David and Victor31Codes<i
+            class="fa-brands fa-github"
+          ></i
+        ></a>
+      </p>
+    </footer>
+  </body>
+  <script src="app.js"></script>
+</html>

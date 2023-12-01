@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+        <script
+      src="https://kit.fontawesome.com/e8f5675b73.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="shortcut icon"
+      href="assets/logo_pestaña.png"
+      type="image/x-icon"
+    />
+    <title>Registro</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav_header">
+        <picture id="imagen_logo"
+          ><img src="assets/maraton_logo.jpg" alt="logo_maratonProgramacion"
+        /></picture>
+        <button class="burger_btn">
+          <i class="fa-solid fa-align-justify"></i>
+        </button>
+      </div>
+      <div class="nav_links">
+        <a href="index.html" class="nav_link"> Home </a>
+        <a href="registro.html" class="nav_link"> Register </a>
+        <a href="login.html" class="nav_link"> Login </a>
+      </div>
+    </nav>
+    <main class="sombra">
+      <section class="contenedor_form">
+
+
+        <form id="miFormulario" class="formulario" action="http://localhost:8080/register" method="post" >
+            <h2>Inscribase en la Maratón</h2>
+
+                        <div class="contenedor-campos">
+              <div class="campo">
+                <label for="entireName">Nombre del equipo</label>
+                <input
+                  class="input-text"
+                  type="name"
+                  name = "nombreequipo"
+                  placeholder="El nombre del equipo"
+                  name="entireTeamName"
+                  required
+                />
+              </div>
+
+            <div class="contenedor-campos">
+              <div class="campo">
+                <label for="entireName">Nombre Integrante #1</label>
+                <input
+                  name = "nombres1"
+                  class="input-text"
+                  type="name_1"
+                  placeholder="Tu nombre"
+                  name="entireName"
+                  required
+                />
+              </div>
+
+              <div class="campo">
+                <label>Código Integrante #1</label>
+                <input
+                  class="input-text"
+                  type="cod_1"
+                  name = "codigo1"
+                  placeholder="Tu Código"
+                  required
+                />
+              </div>
+
+              <div class="campo">
+                <label>Carrera Integrante #1</label>
+                <input
+                  class="input-text"
+                  name = "carrera1"
+                  type="carrera_1"
+                  placeholder="Proyecto Curricular"
+                  required
+                />
+              </div>
+
+                <div class="campo">
+                <label>Materia de programación mas avanzada que haya circulado #1</label>
+                <input
+                  class="input-text"
+                  name ="materia1"
+                  type="materia_1"
+                  placeholder="Materia de programación"
+                  required
+                />
+              </div>
+
+                          <div class="contenedor-campos">
+              <div class="campo">
+                <label for="entireName">Nombre Integrante #2</label>
+                <input
+                  class="input-text"
+                  name = "nombres2"
+                  type="name_2"
+                  placeholder="Tu nombre"
+                  name="entireName"
+                  required
+                />
+              </div>
+
+              <div class="campo">
+                <label>Código Integrante #2</label>
+                <input
+                  class="input-text"
+                  name = "codigo2"
+                  type="cod_2"
+                  placeholder="Tu Código"
+                  required
+                />
+              </div>
+
+              <div class="campo">
+                <label>Carrera Integrante #2</label>
+                <input
+                  class="input-text"
+                  name = "carrera2"
+                  type="carrera_2"
+                  placeholder="Proyecto Curricular"
+                  required
+                />
+              </div>
+
+                <div class="campo">
+                <label>Materia de programación mas avanzada que haya circulado #2</label>
+                <input
+                  class="input-text"
+                  name ="materia2"
+                  type="materia_2"
+                  placeholder="Materia de programación"
+                  required
+                />
+              </div>
+
+                          <div class="contenedor-campos">
+              <div class="campo">
+                <label for="entireName">Nombre Integrante #3</label>
+                <input
+                  class="input-text"
+                  name = "nombres3"
+                  type="name_3"
+                  placeholder="Tu nombre"
+                  name="entireName"
+                  required
+                />
+              </div>
+
+              <div class="campo">
+                <label>Código Integrante #3</label>
+                <input
+                  class="input-text"
+                  name = "codigo3"
+                  type="cod_3"
+                  placeholder="Tu Código"
+                  required
+                />
+              </div>
+
+              <div class="campo">
+                <label>Carrera Integrante #3</label>
+                <input
+                  class="input-text"
+                  name = "carrera3"
+                  type="carrera_3"
+                  placeholder="Proyecto Curricular"
+                  required
+                />
+              </div>
+
+                <div class="campo">
+                <label>Materia de programación mas avanzada que haya circulado #3</label>
+                <input
+                  class="input-text"
+                  name ="materia3"
+                  type="materia_3"
+                  placeholder="Materia de programación"
+                  required
+                />
+              </div>
+
+              <div class="campo">
+                <label for="coding">Nivel por categoría</label>
+                <div class="inputRadio">                
+                <p> <input type="radio" name="coding" id="Básica"  /><span>Básica</span></p>
+                <p> <input type="radio" name="coding" id="Intermedia"  /><span>Intermedia</span></p>
+                <p> <input type="radio" name="coding" id="Avanzada"  /><span>Avanzada</span></p>
+                <p> <input type="radio" name="coding" id="Elite"  /><span>Elite</span></p>
+              </div>
+            </div>
+            <!--Contenedor Campos-->
+            <div class="enviar alinear-derecha flex">
+              <input class="boton w-sm-100" type="submit" name="Enviar" id="enviar" />
+            </div>
+            <div id="mensajeError" class="mensaje"></div>
+        </form>
+</html>

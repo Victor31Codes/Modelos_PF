@@ -1,0 +1,450 @@
+:root {
+  --blanco: #fafafa;
+  --oscuro: #212121;
+  --primario: rgb(51, 50, 49);
+  --secundario: #2757a3;
+  --gris: #757575;
+  --grissClaro: #edf0df;
+  --transition: 0.3s ease-in-out all;
+  --fs--2: clamp(0.7038rem, 0.9531rem + -0.3217vw, 0.8888rem);
+  --fs--1: clamp(0.9375rem, 1.0217rem + -0.1087vw, 1rem);
+  --fs-0: clamp(1.125rem, 1.0815rem + 0.2174vw, 1.66rem);
+  --fs-1: clamp(1.2656rem, 1.1263rem + 0.6967vw, 1.6663rem);
+  --fs-2: clamp(1.4238rem, 1.1464rem + 1.387vw, 2.2213rem);
+  --fs-3: clamp(1.6019rem, 1.1293rem + 2.363vw, 2.9606rem);
+  --fs-4: clamp(1.8019rem, 1.0558rem + 3.7304vw, 3.9469rem);
+  --fs-5: clamp(2.0275rem, 0.9029rem + 5.6228vw, 5.2606rem);
+}
+::selection {
+  color: #5e8dd8;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #212121;
+  /*1 rem = 10 px*/
+  font-family: "Orbitron", sans-serif;
+}
+
+.boton {
+  background-color: var(--secundario);
+  color: var(--blanco);
+  padding: 1rem 3rem;
+  margin-top: 2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 0.5rem; /*Propiedad para redondear bordes*/
+  width: 90%;
+  text-align: center;
+  border: none;
+  transition: var(--transition);
+}
+
+@media (min-width: 480px) {
+  .boton {
+    width: auto;
+  }
+}
+
+.boton:hover {
+  cursor: pointer;
+  scale: 1.05;
+}
+
+/*Clase Encargada de establecer sombras*/
+.sombra {
+  box-shadow: 0px 5px 15px 0px rgba(102, 102, 102, 0.39);
+  border-radius: 0.8rem;
+  margin-inline: 1rem;
+  padding: 0.3rem;
+}
+
+.sombra h2 {
+  color: var(--blanco);
+  padding: 2rem;
+  font-size: var(--fs-3);
+}
+
+h1,
+h2,
+h3 {
+  text-align: center;
+}
+
+/*
+p{
+    text-align: center;
+    color: var(--blanco);
+}/*
+
+
+/* Navegacion Principal */
+
+#imagen_logo {
+  background-size: cover;
+}
+#imagen_logo img {
+  width: 100%;
+  height: 80px;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav_header {
+  display: flex;
+  height: 6rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 1rem;
+}
+
+.burger_btn {
+  background-color: var(--secundario);
+  width: 10vw;
+  height: 4vh;
+  cursor: pointer;
+  border-radius: 0.2rem;
+  border: none;
+}
+.burger_btn i {
+  font-size: var(--fs-1);
+}
+
+.nav_links {
+  display: flex;
+  height: 0;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  transition: var(--transition);
+}
+
+.show_links {
+  height: 8rem;
+}
+
+.nav_link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90vw;
+  font-size: var(--fs-1);
+  font-weight: 700;
+  padding-block: 0.5rem;
+  border-top: 1px solid var(--gris);
+  text-transform: capitalize;
+  color: var(--secundario);
+  letter-spacing: 1px;
+  font-weight: 200;
+  text-decoration: none;
+  font-weight: 700;
+  transition: var(--transition);
+}
+.nav_link:nth-child(3) {
+  border-bottom: 1px solid var(--gris);
+}
+
+@media (min-width: 768px) {
+  /*Tamaño para tablet*/
+  .navbar {
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #dfdada;
+  }
+
+  .burger_btn {
+    display: none;
+  }
+  .nav_links {
+    display: flex;
+    height: 6rem;
+    flex-direction: row;
+  }
+
+  .nav_link,
+  .nav_contact_link {
+    width: 15vw;
+    border-top: none;
+    transition: var(--transition);
+  }
+
+  .show_links {
+    height: 0;
+  }
+
+  .nav_link:hover {
+    color: #5e8dd8;
+    scale: 1.08;
+  }
+  .btn {
+    transition: var(--transition);
+  }
+  .nav_link:nth-child(3) {
+    border-bottom: none;
+  }
+}
+
+/* Hero */
+
+.hero {
+  /*También se pueden agregar imagenes via css*/
+  background-image: url(../assets/hero2.jpg); /*Nos devolvemos una carpeta, entramos a la correcta y seleccionamos ka imagen deseada*/
+  background-repeat: no-repeat; /*Para que la imagen no se repita*/
+  background-size: cover; /*Le decimos a la imagen que tome todo el ancho disponible*/
+  height: 450px;
+  position: relative; /*El padre siempre debe tener posicion relativa*/
+  margin-bottom: 2rem;
+  margin: 1rem;
+  border-radius: 0.4rem;
+}
+
+/*Transparencia de la imagen*/
+.contenido-hero {
+  position: absolute; /**/
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.8
+  ); /*El "indica la transparencia y va de 0 a 1"*/
+  background-color: rgb(
+    0 0 0 /0.8
+  ); /*Nueva forma de colocar el color y transparencia, aún no es muy soportado*/
+  width: 100%; /*Tomará todo el espacio disponible del padre*/
+  height: 100%;
+
+  /*Código para alinear elementos vertical y horizontalmente*/
+  display: flex; /*Alinear horizontalmente*/
+  flex-direction: column;
+  align-items: center; /*Alinear verticalmente*/
+  justify-content: space-around;
+  border-radius: 0.4rem;
+}
+
+.cont_hero_texto {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.cont_hero_texto h2,
+.cont_hero_texto p {
+  letter-spacing: 1px;
+  color: var(--blanco);
+  font-size: var(--fs-1);
+  padding: 1rem;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.cont_hero_texto h2:hover,
+.cont_hero_texto p:hover {
+  scale: 1.1;
+  color: #5e8dd8;
+}
+.cont_hero_texto h2 {
+  font-size: var(--fs-4);
+}
+
+.servicios {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+/* Servicios */
+/*Organizando los servicios*/
+@media (min-width: 768px) {
+  .servicios {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /*3 columnas / 1fr= 1 fraccion del espacio, y que se repita tres veces*/
+    column-gap: 4rem; /*Agregando separación entre columnas*/
+    padding: 2rem;
+  }
+  .servicio:hover {
+    scale: 1.05;
+  }
+}
+
+.servicio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--secundario);
+  gap: 1rem;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  transition: var(--transition);
+}
+
+.servicio h3 {
+  color: var(--blanco);
+  font-weight: bold;
+  text-align: center;
+}
+
+.servicio p {
+  line-height: 2; /*Interlineado*/
+  color: var(--blanco);
+}
+
+/*Contacto*/
+.contenedor_form {
+  display: flex;
+  justify-content: center;
+}
+.formulario {
+  background-color: #273aa3;
+  width: min(60rem, 100%);
+  display: flex;
+  flex-direction: column;
+
+  padding: 2rem;
+  border-radius: 1rem;
+  margin-block: 1rem;
+  gap: 1.7rem;
+}
+
+.formulario h2 {
+  color: var(--blanco);
+  font-size: var(--fs-3);
+}
+
+.campo {
+  margin-bottom: 1rem;
+}
+
+.campo label {
+  color: var(--blanco);
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.inputRadio {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.inputRadio p {
+  display: flex;
+  gap: 0.5rem;
+  font-size: var(--fs--1);
+  padding: 1rem;
+  color: var(--blanco);
+}
+
+.input-text {
+  width: 100%;
+  border: none;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+}
+
+.enviar .boton {
+  width: 100%;
+}
+
+.form-container {
+  width: 98vw;
+  height: 78vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-login {
+  width: 25rem;
+  height: 22rem;
+  background: #4e4d4d;
+  box-shadow: 7px 13px 37px #000;
+  padding: 20px 30px;
+  border-top: 4px solid #017bab;
+  color: white;
+}
+
+.form-login h5 {
+  margin: 0;
+  text-align: center;
+  height: 40px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid;
+  font-size: var(--fs-0);
+}
+
+.controls {
+  width: 100%;
+  border: 1px solid #017bab;
+  margin-bottom: 15px;
+  padding: 11px 10px;
+  background: #252323;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.buttons {
+  width: 100%;
+  height: 40px;
+  background: #017bab;
+  border: none;
+  color: white;
+  margin-bottom: 16px;
+  font-size: var(--fs--1);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.buttons:hover {
+  scale: 1.05;
+  background-color: #189ed3;
+}
+
+.form-login p {
+  height: 40px;
+  text-align: center;
+  border-bottom: 1px solid;
+}
+
+.form-login a {
+  color: white;
+  text-decoration: none;
+  font-size: var(--fs--2);
+}
+
+.form-login a:hover {
+  text-decoration: underline;
+}
+
+.footer_container {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--secundario);
+  height: 5rem;
+  color: var(--grissClaro);
+  gap: 1rem;
+}
+.footer_container p {
+  margin-bottom: 0;
+  font-size: var(--fs--1);
+  text-align: center;
+}
+.footer_container p span {
+  color: var(--oscuro);
+}
+.footer_container p a {
+  color: var(--primary-800);
+}

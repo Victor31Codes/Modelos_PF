@@ -1,0 +1,71 @@
+INSERT INTO carrera (id_carrera, nombrecarrera)
+VALUES
+    (1, 'Administración de Empresas'),
+    (2, 'Arquitectura'),
+    (3, 'Biología'),
+    (4, 'Contabilidad'),
+    (5, 'Derecho'),
+    (6, 'Economía'),
+    (7, 'Enfermería'),
+    (8, 'Filosofía'),
+    (9, 'Geología'),
+    (10, 'Historia'),
+    (11, 'Ingeniería Civil'),
+    (12, 'Ingeniería de Sistemas'),
+    (13, 'Lengua y Literatura'),
+    (14, 'Matemáticas'),
+    (15, 'Medicina'),
+    (16, 'Psicología'),
+    (17, 'Química'),
+    (18, 'Sociología'),
+    (19, 'Turismo'),
+    (20, 'Veterinaria');
+
+INSERT INTO categoria (id_categoria, nombre)
+VALUES
+    (1, 'Básica'),
+    (2, 'Media'),
+    (3, 'Avanzada'),
+    (4, 'Elite');
+
+INSERT INTO semestre (id_semestre, numerosemestre)
+VALUES
+    (1, 1),
+    (2, 2),
+    (3, 3),
+    (4, 4),
+    (5, 5),
+    (6, 6),
+    (7, 7),
+    (8, 8),
+    (9, 9),
+    (10, 10);
+
+
+INSERT INTO materiaprogramacion (id_materia, nombremateria, id_semestre)
+VALUES
+    (1, 'Programación Básica', 1),
+    (2, 'Programación Orientada a Objetos', 2),
+    (3, 'Programación Avanzada', 3);
+
+INSERT INTO materia_categoria (id_materiacat, id_categoria, id_materia)
+VALUES
+    (1, 1, 1), 
+    (2, 2, 1),
+    (3, 3, 1), 
+    (4, 4, 1), 
+    (5, 2, 2), 
+    (6, 3, 2),
+    (7, 4, 2),
+    (8, 3, 3),
+    (9, 4, 3);
+
+CREATE SEQUENCE id_equipos
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+	
+ALTER TABLE equipo
+    ALTER COLUMN id_equipo SET DEFAULT nextval('id_equipos'::regclass);
